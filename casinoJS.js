@@ -46,8 +46,10 @@ let bet    = document.querySelector('.enter-money');
 let money  = document.querySelector('.money');
 
 
-let balance = Math.abs(parseFloat(prompt("What is your Balance?!")));
-money.textContent = balance.toFixed(2) + '$';
+setTimeout(() => {
+    let moneyAmount = Math.abs(parseFloat(prompt("What is your Balance?!")));
+    money.textContent = moneyAmount.toFixed(2) + '$';
+}, 200);
 
 
 dev2.addEventListener('click', event => {
