@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("saw2.jpg");
+    background-size: cover;      /* მთლიანად ავსებს, კვეთს საჭიროებისამებრ */
+    background-position: center; /* ცენტრში ამყოფებს */
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    gap: 30px;
+}
+
+.sec1 {
+    background-color: #1b1b1b;
+    height: 430px;
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+.sec2 {
+    width: 430px;
+    height: 430px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.sec2 > div {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(44, 44, 44);
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*  you lose  */
+
+.you-lose {
+    display: none;
+}
+
+.you-lose > div {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.you-lose > div > p {
+    margin: 0;
+}
+
+.addYouLose {
+    background-color: rgba(252, 68, 68, 0.3);
+    width: 420px;
+    height: 430px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(330px, 0);
+    color: rgba(255, 0, 0, 0.6);
+    margin: 0;
+    font-size: 60px;
+    letter-spacing: 7px;
+    z-index: 1000;
+    user-select: none;
+    display: inline-block;
+}
+
+
+
+.you-win {
+    display: none;
+}
+
+.you-win > div {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.you-win > div > p {
+    margin: 0;
+}
+
+.addYouWin {
+    background-color: rgba(108, 255, 29, 0.3);
+    width: 420px;
+    height: 430px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(330px, 0);
+    color: rgba(0, 255, 8, 0.6);
+    margin: 0;
+    font-size: 60px;
+    letter-spacing: 7px;
+    z-index: 1000;
+    user-select: none;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+div > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+.rotate-card {
+    transform: rotate3d(0, 1, 0, 180deg);
+    transition: 0.5s;
+}
+.rotate {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+
+.sec1 {
+    color: rgb(165, 19, 19);
+}
+
+.sec1 > h2 {
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 30px;
+}
+
+.your-money {
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+.money {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 530;
+    color: greenyellow;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px 0 5px 0;
+}
+
+.bet {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bet > p {
+    margin-bottom: 5px;
+    color: rgb(107, 105, 105);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+.money-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.money-buttons > input {
+    background-color: rgb(73, 72, 72);
+    color: #1b1b1b;
+    border-radius: 5px 0 0 5px;
+    border: 0px;
+    padding: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+.money-buttons > div {
+    background-color: rgb(73, 72, 72);
+    border-radius: 0 5px 5px 0;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 115px;
+    height: 42px;
+}
+
+.money-buttons > div > div {
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    padding: 5px 8px;
+    color: gray;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.money-buttons > div > div:hover {
+    transform: scale(1.03);
+}
+.money-buttons > div > div:active {
+    transform: scale(1.05);
+}
+
+.place-bet {
+    text-align: center;
+    padding: 5px 50px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, yellow, rgb(157, 106, 11));
+    display: inline-block;
+    border: 0px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.place-bet:hover {
+    transform: scale(1.03);
+}
+.place-bet:active {
+    transform: scale(1.05);
+}
+
+.bet-p2 {
+    font-size: 42px;
+    color: greenyellow;
+    margin-top: 5px;
+}
+
+.last-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.reset, .withdraw {
+    color: white;
+    border-radius: 7px;
+    padding: 5px 15px;
+    cursor: pointer;
+    user-select: none;
+    margin: 10px;
+}
+
+.reset {
+    background: linear-gradient(45deg, red, rgb(224, 87, 110));
+    letter-spacing: 3px;
+    padding: 6px 15px;
+}
+
+.withdraw {
+    background: linear-gradient(45deg, green, rgb(148, 236, 33));
+    letter-spacing: 3px;
+}
+
+.reset:hover, .withdraw:hover {
+    transform: scale(1.02);
+}
+
+.reset:active, .withdraw:active {
+    transform: scale(1.05);
+}
