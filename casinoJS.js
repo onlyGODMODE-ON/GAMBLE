@@ -104,11 +104,12 @@ section2.addEventListener("click", event => {
 
     let target = event.target.closest('div');
     let index = arr.indexOf(target);
-    rotatedCards.push(index);
-
-    let img = event.target.src.split('/')[3];
+    
+    let imgEl = target.querySelector('img');
+    let img = imgEl.src.split('/').pop();
 
     if (isBet && img == "card2.jpg") {
+        rotatedCards.push(index);
         arr[index].classList.add('rotate-card');
         
         setTimeout(() => {
